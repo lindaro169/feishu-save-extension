@@ -41,3 +41,7 @@
 - `manifest.json` —— MV3 清单
 - `content.js` —— 全部逻辑（按钮 / 进度面板 / 收集 / 图片 / 提交 / 轮询）
 - `content.css` —— 按钮与面板样式
+
+## 许可证
+
+[MIT](LICENSE)
