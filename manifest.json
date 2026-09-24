@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "飞书文档转存",
+  "version": "2.5.2",
+  "description": "把只读/禁止复制的飞书文档整篇原样转存到自己的飞书空间，图片与视频真正落到你自己的文档里。零配置：直接用你已登录的飞书。",
+  "permissions": [
+    "storage",
+    "downloads",
+    "debugger"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "飞书文档转存",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.feishu.cn/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

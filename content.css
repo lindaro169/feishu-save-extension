@@ -1,0 +1,63 @@
+/* 飞书文档转存 - 样式（前缀 fxfer- 避免冲突） */
+
+.fxfer-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 88px;
+  z-index: 2147483600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 20px;
+  background: #3370ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  box-shadow: 0 4px 14px rgba(51, 112, 255, .38);
+  cursor: pointer;
+  user-select: none;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+.fxfer-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(51, 112, 255, .45); }
+.fxfer-btn.fxfer-disabled { opacity: .55; pointer-events: none; }
+
+.fxfer-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 140px;
+  z-index: 2147483601;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(31, 35, 41, .18);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #1f2329;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.fxfer-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.fxfer-title { font-weight: 600; font-size: 14px; }
+.fxfer-close { cursor: pointer; color: #8f959e; font-size: 18px; line-height: 1; padding: 0 2px; }
+.fxfer-close:hover { color: #1f2329; }
+.fxfer-status { margin: 6px 0 8px; line-height: 1.5; word-break: break-all; }
+.fxfer-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: #f0f1f5;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.fxfer-bar-inner {
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #3370ff, #5b8cff);
+  transition: width .3s ease;
+}
+.fxfer-detail { color: #8f959e; font-size: 12px; line-height: 1.5; word-break: break-all; white-space: pre-wrap; }
+.fxfer-result { margin-top: 8px; line-height: 1.6; word-break: break-all; }
+.fxfer-result a { color: #3370ff; text-decoration: none; }
+.fxfer-result a:hover { text-decoration: underline; }
